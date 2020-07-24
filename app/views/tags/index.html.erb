@@ -1,0 +1,8 @@
+<h3 class="text-center">CATEGORY DETAILS</h3>
+<% @tag.each do |tags| %>
+<div class="card body">
+  <h3> Category Name : <%= tags.tagname %></h3>
+  <%= link_to "Read More" ,tag_path(tags), :class => 'btn btn-outline-primary' %>
+</div>
+<br>
+<% end %>

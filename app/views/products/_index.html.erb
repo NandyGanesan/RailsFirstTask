@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<h3 class="text-center">PRODUCT DETAILS</h3>
+<%= link_to "Add Product" ,new_tag_product_path(@tag), :class => 'btn btn-outline-primary' %>
+<br/>
+<% @tag.product.each do |product| %>
+<div class="card body">
+  <h3> Product Name : <%= product.productname %></h3>
+  <%= link_to "Read More" ,tag_product_path(product), :class => 'btn btn-outline-primary' %>
+</div>
+<br/>
+<% end %>

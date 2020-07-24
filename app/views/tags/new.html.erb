@@ -1,0 +1,16 @@
+<h3 class="text-center">Add New Category</h3>
+
+<%= form_with model: @tag, url: tags_path do |f| %>
+<% if @tag.errors.any? %>
+    <% @tag.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
+<p>
+  <%= f.label :tagname,"Category Name" %><br>
+  <%= f.text_field :tagname , required: true %>
+</p>
+<p>
+  <%= f.submit("Add Category", {:class => 'btn btn-outline-primary'}) %>
+</p>
+<% end %>

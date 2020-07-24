@@ -1,0 +1,14 @@
+<h3> Add Comments</h3>
+<%= form_for([@product, @product.review.build]) do |f| %>
+<p>
+  <%= f.label :username %><br>
+  <%= f.text_field :username , required: true %>
+</p>
+<p>
+  <%= f.label :body %><br>
+  <%= f.text_field :body , required: true %>
+</p>
+<p>
+  <%= f.submit({ :class => 'btn btn-outline-primary'}) %>
+</p>
+<% end %>

@@ -1,0 +1,12 @@
+<h3 class="text-center">Add New Products</h3>
+
+<%= form_for([@tag, @tag.product.build]) do |f| %>
+
+<p>
+  <%= f.label :productname %><br>
+  <%= f.text_field :productname , required: true %>
+</p>
+<p>
+  <%= f.submit("Add Product",{:class => 'btn btn-outline-primary'}) %>
+</p>
+<% end %>

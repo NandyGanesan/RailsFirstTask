@@ -1,0 +1,12 @@
+<h3 class="text-center">Edit Product Detail</h3>
+
+<%= form_for([@tag, @tag.product.build]) do |f| %>
+
+<p>
+  <%= f.label :productname %><br>
+  <%= f.text_field :productname %>
+</p>
+<p>
+  <%= f.submit("Edit Product",{:class => 'btn btn-outline-primary'}) %>
+</p>
+<% end %>

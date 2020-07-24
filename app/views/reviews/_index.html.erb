@@ -1,0 +1,11 @@
+<h3> Comments</h3>
+<% @product.review.each do |review| %>
+<div class="card body">
+    <p><strong><%= review.username %></strong>
+      : <%= review.body %>
+      <%= link_to '[X]', [review.product, review],
+                          method: :delete,
+                          data: { confirm: 'Are you sure?'} %>
+      </p>
+</div>
+<% end %>

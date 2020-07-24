@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h3>Product Name : <%= @product.productname %></h3>
+<%= link_to "Edit", edit_tag_product_path(@product), :class => 'btn btn-outline-primary' %>
+<%= link_to "Delete", tag_product_path(@product), method: :delete, data: {confirm: 'Are You Sure?'}, :class => 'btn btn-outline-danger' %>
+</div>
+<hr>
+
+<%= render 'reviews/index' %>
+<%= render 'reviews/new' %>
